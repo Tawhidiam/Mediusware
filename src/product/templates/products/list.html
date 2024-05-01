@@ -55,10 +55,12 @@
                     </thead>
 
                     <tbody>
+
+                    {% for item in Product %}
                     <tr>
                         <td>1</td>
-                        <td>T-Shirt <br> Created at : 25-Aug-2020</td>
-                        <td>Quality product in low cost</td>
+                        <td>T-Shirt <br> Created at : {{ Product.title }}</td>
+                        <td>{{ Product.description}}</td>
                         <td>
                             <dl class="row mb-0" style="height: 80px; overflow: hidden" id="variant">
                                 <dt class="col-sm-3 pb-0">
@@ -107,6 +109,7 @@
                             </div>
                         </td>
                     </tr>
+                    {% endfor %}
                     </tbody>
 
                 </table>
@@ -123,6 +126,13 @@
 
                 </div>
             </div>
+        </div>
+        <div>
+            <a href="#">Previous</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Next</a>
         </div>
     </div>
 {% endblock %}
